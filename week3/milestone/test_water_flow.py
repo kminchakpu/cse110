@@ -80,6 +80,6 @@ def test_convert_kpa_to_psi() -> None:
     assert convert_kpa_to_psi(158.7) == approx(23.02, abs=0.01)
 
 
-# Command-line helper execution interface
-if __name__ == "__main__":
-    pytest.main(["-v", "--tb=line", "-rN", __file__])
+# This Calls the main function that is part of pytest so that the
+# computer will execute the test functions in this file.
+pytest.main(["-v", "--tb=line", "-rN", __file__])
