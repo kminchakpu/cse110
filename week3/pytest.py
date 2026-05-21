@@ -15,18 +15,18 @@ def compute_tire_volume(width: float, aspect_ratio: float, diameter: float) -> f
     return volume
 
 def main() -> None:
-    # 1. Get user input for tire dimensions 
+    # Get user input for tire dimensions 
     width = float(input("Enter the width of the tire in mm (ex 205): ")) 
     aspect_ratio = float(input("Enter the aspect ratio of the tire (ex 60): ")) 
     diameter = float(input("Enter the diameter of the wheel in inches (ex 15): ")) 
 
-    # 2. Calculate the volume using the logic-only function 
+    # Calculate the volume using the logic-only function 
     volume = compute_tire_volume(width, aspect_ratio, diameter)
 
-    # 3. Display the result rounded to two decimal places 
+    # Display the result rounded to two decimal places 
     print(f"\nThe approximate volume is {volume:.2f} liters")
 
-    # 4. Get the current date (Do NOT include time) 
+    #Get the current date (Do NOT include time) 
     current_date = datetime.now()
     
     # --- Enhancement (Exceeding Requirements) ---
@@ -35,7 +35,7 @@ def main() -> None:
     if wants_to_buy == "yes":
         phone_number = input("Please enter your phone number: ") 
 
-    # 5. Append information to volumes.txt 
+    #Append information to volumes.txt 
     # Format: date, width, aspect_ratio, diameter, volume, [optional phone]
     with open("volumes.txt", "at") as volumes_file:
         if phone_number:
