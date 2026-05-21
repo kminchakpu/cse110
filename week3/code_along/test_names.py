@@ -21,3 +21,7 @@ def test_extract_given_name():
     assert extract_given_name("Brown; Sally") == "Sally"
     assert extract_given_name("Li; Al") == "Al"
     assert extract_given_name("Smith-Washington; Martha") == "Martha"
+
+# Call the main function that is part of pytest so that the
+# computer will execute the test functions in this file.
+pytest.main(["-v", "--tb=line", "-rN", __file__])

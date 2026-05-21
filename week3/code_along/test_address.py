@@ -25,3 +25,7 @@ def test_extract_zipcode():
     assert extract_zipcode("525 S Center St, Rexburg, ID 83460") == "83460"
     assert extract_zipcode("1600 Pennsylvania Ave NW, Washington, DC 20500") == "20500"
     assert extract_zipcode("123 Main St, Los Angeles, CA 90001") == "90001"
+
+# Call the main function that is part of pytest so that the
+# computer will execute the test functions in this file.
+pytest.main(["-v", "--tb=line", "-rN", __file__])
