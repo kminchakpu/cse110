@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 111 | Sample Solution</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cse.github.io/cse-ww-program-pt/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="https://byui-cse.github.io/cse-ww-program-pt/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" />
+  <script type="text/javascript"
+    src="https://js-cdn.dynatrace.com/jstag/16294a69b33/bf29241ovs/620f7e0f8d21af1a_complete.js"
+    crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 111<span id="coursetitle">: Programming with Functions</span></h1>
+      <img src="../../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav id="autogen-top-nav">
+      <!-- This nav is auto-generated -->
+      <span><a href="..\../index.html">Home</a></span>
+      <span class="active"><a href="..\../week01/index.html">W1</a></span>
+      <span><a href="..\../week02/index.html">W2</a></span>
+      <span><a href="..\../week03/index.html">W3</a></span>
+      <span><a href="..\../week04/index.html">W4</a></span>
+      <span><a href="..\../week05/index.html">W5</a></span>
+      <span><a href="..\../week06/index.html">W6</a></span>
+      <span><a href="..\../week07/index.html">W7</a></span>
+      <!-- end auto-generated -->
+    </nav>
+    <h2>Sample Solution</h2>
+    <p>The following shows one way to solve this problem. It is not the <em>only</em> way this problem can be solved.
+    </p>
+
+    <h3>check-1_solution.py</h4>
+
+      <pre><code class="python">
+# Copyright 2020, Brigham Young University-Idaho. All rights reserved.
+
+"""
+When you physically exercise to strengthen your heart, you
+should maintain your heart rate within a range for at least 20
+minutes. To find that range, subtract your age from 220. This
+difference is your maximum heart rate per minute. Your heart
+simply will not beat faster than this maximum (220 - age).
+When exercising to strengthen your heart, you should keep your
+heart rate between 65% and 85% of your heart's maximum rate.
+"""
+
+# Get the user's age as a string.
+text = input("Please enter your age: ")
+
+# Convert the string that the user entered into an integer.
+age = int(text)
+
+# Compute the slowest and fastest beneficial
+# heart rates from the user's age.
+max_rate = 220 - age
+slowest = max_rate * 0.65
+fastest = max_rate * 0.85
+
+# Use an f-string to create and print a message for the user to see.
+print("When you exercise to strengthen your heart, you should")
+print(f"keep your heart rate between {slowest:.0f} and {fastest:.0f}")
+print("beats per minute.")
+
+</code></pre>
+
+      <p>Download: <a href="check-1_solution.html" download>check-1_solution.py</a></p>
+
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
