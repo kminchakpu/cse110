@@ -1,3 +1,12 @@
+# Author: Kevin Cross Minchakpu
+# Course: CSE 111 - Block 3
+# Institution: Brigham Young University - Idaho
+# Instructor: CJ Waisath
+
+"""
+Test program for water flow calculations. 
+"""
+
 from pytest import approx
 import pytest
 
@@ -26,17 +35,9 @@ def test_pressure_gain_from_water_height() -> None:
 
 
 def test_pressure_loss_from_pipe() -> None:
-    assert pressure_loss_from_pipe(
-        0.28687, 0.0, 0.013, 1.65
-    ) == approx(0.0, abs=0.001)
-
-    assert pressure_loss_from_pipe(
-        0.28687, 1518.2, 0.013, 1.65
-    ) == approx(-93.485, abs=0.001)
-
-    assert pressure_loss_from_pipe(
-        0.048692, 15.0, 0.018, 1.75
-    ) == approx(-8.476, abs=0.001)
+    assert pressure_loss_from_pipe(0.28687, 0.0, 0.013, 1.65) == approx(0.0, abs=0.001)
+    assert pressure_loss_from_pipe(0.28687, 1518.2, 0.013, 1.65) == approx(-93.485, abs=0.001)
+    assert pressure_loss_from_pipe(0.048692, 15.0, 0.018, 1.75) == approx(-8.476, abs=0.001)
 
 
 def test_pressure_loss_from_fittings() -> None:
@@ -57,29 +58,10 @@ def test_reynolds_number() -> None:
 
 def test_pressure_loss_from_pipe_reduction() -> None:
     reynolds = reynolds_number(0.28687, 1.65)
-
-    loss = pressure_loss_from_pipe_reduction(
-        0.28687,
-        1.65,
-        reynolds,
-        0.048692
-    )
-
+    loss = pressure_loss_from_pipe_reduction(0.28687, 1.65, reynolds, 0.048692)
     assert loss == approx(-163.744, rel=0.01)
-
-    assert pressure_loss_from_pipe_reduction(
-        0.28687,
-        1.65,
-        0,
-        0.048692
-    ) == approx(0.0)
-
-    assert pressure_loss_from_pipe_reduction(
-        0.1,
-        2.0,
-        50000,
-        0.05
-    ) == approx(-3.025, abs=0.01)
+    assert pressure_loss_from_pipe_reduction(0.28687, 1.65, 0, 0.048692 ) == approx(0.0)
+    assert pressure_loss_from_pipe_reduction(0.1, 2.0, 50000, 0.05) == approx(-3.025, abs=0.01)
 
 
 def test_kpa_to_psi() -> None:
