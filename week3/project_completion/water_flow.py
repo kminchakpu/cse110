@@ -1,6 +1,9 @@
-"""
-Author: Kevin Cross Minchakpu
+# Author: Kevin Cross Minchakpu
+# Course: CSE 111 - Block 3
+# Institution: Brigham Young University - Idaho
+# Instructor: CJ Waisath
 
+"""
 Enhancements:
 - Added constants for gravity and water properties.
 - Added a function to convert kilopascals (kPa) to pounds per square inch (psi).
