@@ -46,8 +46,13 @@ def main():
     products_dict = read_dictionary("products.csv", 0)
     
     # Print the product dictionary (required for milestone)
-    print("Products Dictionary:")
-    pprint.pprint(products_dict)
+    print("Products Dictionary (Catalog Reference):")
+    print(f"{'Key':<6} | {'Product Name':<25} | {'Price':<6}")
+    print("-" * 45)
+
+    for key, details in products_dict.items():
+        # details[1] is the product name, details[2] is the price string
+        print(f"{key:<6} | {details[1]:<25} | ${details[2]:<6}")
     print()
     
     print("--- Requested Items ---")
