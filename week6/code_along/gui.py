@@ -52,11 +52,11 @@ def clear_fields():
 # Initialize the main window
 root = tk.Tk()
 root.title("Circle Area Calculator")
-root.geometry("380x220")
+root.geometry("480x220")
 root.resizable(False, False)
 
 # Create a main frame with padding for layout structure
-frame = ttk.Frame(root, padding="20 20 20 10")
+frame = ttk.Frame(root, padding="30 30 30 15")
 frame.grid(row=0, column=0, sticky="nsew")
 
 # Configure weights so elements scale cleanly if needed
@@ -65,25 +65,25 @@ root.rowconfigure(0, weight=1)
 
 #Input Row
 lbl_radius = ttk.Label(frame, text="Enter Radius:")
-lbl_radius.grid(row=0, column=0, padx=5, pady=10, sticky="W")
+lbl_radius.grid(row=0, column=0, padx=10, pady=15, sticky="W")
 
 ent_radius = ttk.Entry(frame, width=15)
-ent_radius.grid(row=0, column=1, padx=5, pady=10, sticky="W")
-ent_radius.focus()  # Places cursor in the input box on launch
+ent_radius.grid(row=0, column=1, padx=10, pady=15, sticky="W")
+ent_radius.focus()  
 
 #Output Row
 lbl_result_text = ttk.Label(frame, text="Calculated Area:")
-lbl_result_text.grid(row=1, column=0, padx=5, pady=10, sticky="W")
+lbl_result_text.grid(row=1, column=0, padx=10, pady=15, sticky="W")
 
 lbl_result_value = ttk.Label(frame, text="--", font=("Arial", 10, "bold"))
-lbl_result_value.grid(row=1, column=1, padx=5, pady=10, sticky="W")
+lbl_result_value.grid(row=1, column=1, padx=10, pady=15, sticky="W")
 
 #Action Buttons Row
 btn_calculate = ttk.Button(frame, text="Calculate", command=calculate_area)
-btn_calculate.grid(row=2, column=0, padx=5, pady=15, sticky="W")
+btn_calculate.grid(row=2, column=0, padx=10, pady=15, sticky="W")
 
 btn_clear = ttk.Button(frame, text="Clear", command=clear_fields)
-btn_clear.grid(row=2, column=1, padx=5, pady=15, sticky="W")
+btn_clear.grid(row=2, column=1, padx=10, pady=15, sticky="W")
 
 #Status Bar Enhancement
 # Attached to 'root' directly at the bottom row to stretch across the entire window
