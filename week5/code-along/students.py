@@ -70,7 +70,7 @@ def main() -> None:
     print("Type 'quit' at any time to exit the program.\n")
 
     while True:
-        user_input: str = input("Please enter a student ID number: ").strip()
+        user_input: str = input("Please enter a student ID number (xxxxxxxxx): ").strip()
 
         # Check for exit condition
         if user_input.lower() == "quit":

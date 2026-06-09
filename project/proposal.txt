@@ -1,0 +1,68 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    (This is a proposal. All proposals are written with our best
+    knowledge at the beginning of a project. As we progress from the
+    beginning to the end of a project, we gain more knowledge, and we
+    change some of our proposed ideas. This is part of completing any
+    project and is fine.  However, we still must write a proposal so
+    that our teachers or supervisors know what we intend to do. Please
+    answer each of the following questions to the best of your
+    knowledge.)
+
+Author: Kevin Cross Minchakpu
+Instructor: CJ Waisaith
+
+1. What is the title of your program?
+Community Health Data Analyzer and Visualizer
+
+2. What real-world problem will your program address or help to solve?
+
+Public health educators and community advocates often collect extensive survey or regional 
+data regarding community health metrics (such as vaccination rates, malaria incidence, or 
+sanitation access across different districts). However, raw data in CSV formats can be 
+difficult to interpret quickly.
+This program will address this by processing community health datasets, calculating critical 
+health indicators, identifying high-risk areas that require urgent educational intervention, 
+and generating clear visual charts to present to stakeholders.
+
+
+3. What will you learn from developing this program?
+By developing this program, I will learn how to:
+•Use the pandas library to filter, clean, and aggregate real-world data rows. 
+•Use matplotlib to programmatically generate clear data visualizations (like bar charts and trend lines). 
+•Properly structure a data pipeline into testable, reusable functions that handle parameters and return data structures rather than relying on global variables. 
+•Write effective unit tests using pytest for data-transformation logic. 
+
+4. What Python modules will your program use?
+
+•pandas (for data manipulation and dataset filtering) 
+•matplotlib.pyplot (for generating data visualization charts) 
+•csv (for verifying file structures)
+•pytest (for testing the analytical core logic) 
+
+
+5. List the names of functions you will need?
+
+Following the requirement that the most reusable and testable functions should take parameters 
+and return results instead of getting direct user input or printing: 
+
+a. load_health_data(file_path: str) -> pandas.DataFrame
+oTask: Safely loads a CSV file into a pandas DataFrame and returns it.
+b. calculate_risk_score(incidence_rate: float, prevention_rate: float) -> float
+oTask: Pure mathematical calculation that takes health rates and returns a calculated regional priority or risk score. Highly testable.
+c. filter_high_priority_zones(data: pandas.DataFrame, threshold: float) -> pandas.DataFrame
+oTask: Filters the DataFrame to return only the regions or districts that exceed the specified health risk threshold.
+d. generate_health_summary_chart(data: pandas.DataFrame, output_image_path: str) -> None
+oTask: Takes the processed data and generates/saves a bar chart visualization of the health metrics.
+e. main() -> None
+oTask: Orchestrates the program flow, handles user text interaction/input, and calls the processing modules. 
+
+
+6. List the names of the test functions you will write.
+
+According to the Instructions, I am required to test at least two functions using pytest. Because pure 
+logic functions are the easiest to test, I will target the core data transformation functions: 
+•test_calculate_risk_score()
+oTask: Asserts that calculate_risk_score returns the correct mathematically expected priority score when given various mock pairs of health rates (including edge cases like 0).
+•test_filter_high_priority_zones()
+oTask: Passes a small, controlled mock DataFrame to filter_high_priority_zones and uses assertions to verify that it correctly filters out low-risk rows and retains only the expected high-priority records.
