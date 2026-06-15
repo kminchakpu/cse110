@@ -97,7 +97,7 @@ def test_generate_health_summary_chart_creates_file(tmp_path: Path) -> None:
     
     generate_health_summary_chart(df, str(chart_file))
     
-    # Ensure file generation completely finished and saved
+    # This ensures file generation completely finished and saved
     assert chart_file.exists()
     assert chart_file.stat().st_size > 0
 
